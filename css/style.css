@@ -1,0 +1,436 @@
+
+/************USE SAME FONT AS LOGO******************/
+
+@font-face {
+  font-family: MADETommy;
+  src: url(../fonts/made-tommy-regular-personal-use.otf);
+}
+
+* {
+  font-family: MADETommy;
+}
+
+/*******************HEADER****************/
+/*********** Add color to the top navigation **********/
+.topnav {
+  position: relative;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  z-index:1000;
+}
+
+.div .nav-container{
+	width: 90%;
+	margin: 0;
+	position: relative;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	display: block;
+	float: left;
+	color: #394443;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+/**** Center Links in the Middle ***/
+.topnav-centered {
+	float: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.topnav-left {
+	float: left;
+	padding: 25px 50px 25px 30px;
+  }
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #8BB236;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  color: #8BB236;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+  position: absolute;
+  float: right;
+  top: 20%;
+  left: 85%;
+  padding: 25px 70px 25px 70px;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1000px) {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/****** DROPDOWN *****************/
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: block;
+	float: left;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 999;  
+}
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	text-align: left;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block; z-index: 1 !important;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+  
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1000px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+/****************************BODY********************/
+
+
+.homepage-info {
+	overflow: hidden;
+	z-index: 999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.product-image {
+	display: inline-block;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.product-text {
+	display: inline-block;
+	justify-content: left;
+	width: 60vh;
+	padding-left: 5%;
+	font-size: 2.5vh;
+	margin-right: 5%;
+}
+
+.product-text b {
+	color:  #8BB236;
+	text-decoration: none;
+}
+
+.product-text h1 { 
+	color:  #007C45;
+}
+
+.product-text p {
+	color:  #394443;
+}
+
+.quiz-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	background-color: #007C45;
+	color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+
+	.homepage-info {
+		display: block;
+		align-items: center;
+	}
+
+	.product-image {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 5%;
+	}
+
+	.product-text {
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		max-width: 75%;
+	}
+}
+
+/**************************FOOTER******************/
+
+.hashtag-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #007C45;
+  height: 30vh;
+  text-align: center;
+}
+
+.text-bubble{
+	color: #FFFFFF;
+}
+
+.hashtag-section span{
+  color: #8BB236;
+  font-size: 30px;
+  vertical-align: middle; 
+  text-align: center; 
+}
+
+.hashtag-section a{
+  color: #FFFFFF;
+  font-size: 50px;
+  text-decoration: none;
+  display: table-cell; 
+  vertical-align: middle; 
+  text-align: center; 
+}
+
+.footer-distributed{
+	background: #FFFFFF;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	color:  #394443;
+	font: normal 36px 'Open Sans', cursive;
+	margin: 0;
+}
+
+.footer-distributed h3 span{
+	color: #8BB236;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #22322C;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+  font-weight:400;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #92999f;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #92999f;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #22322C;
+  font-weight:400;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color: #007C45;
+	text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "\2240";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #007C45;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #394443;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #007C45;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+	float: right;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #8BB236;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+	.footer-distributed{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+/*****************MAKE DIFFERENT FEATHER SIZES*****************/
+.feather-16{
+  width: 16px;
+  height: 16px;
+  color: #8BB236;
+}
+
+.feather-24{
+  width: 24px;
+  height: 24px;
+}
+
+.feather-32{
+  width: 32px;
+  height: 32px;
+}
+
